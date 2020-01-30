@@ -28,6 +28,9 @@ module.exports = {
       }
     ],
     'arrow-parens': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/destructuring-assignment': 'off',
     strict: 'off'
   }
 }
