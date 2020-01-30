@@ -18,7 +18,7 @@ Then, once it's installed, create an `.eslintrc.js` file in the top-level direct
 
 ```
 module.exports = {
-  "extends": "@edx/eslint-config",
+  extends: "@edx/eslint-config",
 }
 
 ```
