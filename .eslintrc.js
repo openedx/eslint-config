@@ -5,13 +5,11 @@ module.exports = {
     jest: true,
   },
   extends: [
+    // The airbnb config includes configuraton for import, react, and jsx-a11y.
+    // That means it's the only thing we need here.  We still need to
+    // have those eslint-config plugins installed, though - it defines them
+    // as peer dependencies.
     'airbnb',
-    'plugin:react/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-  ],
-  plugins: [
-    'jsx-a11y',
   ],
   rules: {
     'class-methods-use-this': 'off',
