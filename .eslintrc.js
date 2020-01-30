@@ -11,6 +11,7 @@ module.exports = {
     // as peer dependencies.
     'airbnb',
   ],
+  // If you add rule overrides here, add code to test.js that proves you formatted it right.
   rules: {
     'class-methods-use-this': 'off',
     curly: ['error', 'all'],
@@ -26,6 +27,7 @@ module.exports = {
         ignoreTemplateLiterals: true
       }
     ],
+    'arrow-parens': 'off',
     strict: 'off'
   }
 }

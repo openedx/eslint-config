@@ -11,8 +11,10 @@
 If you're using @edx/frontend-build, then you'll get this package for free. Otherwise, you can install it via:
 
 ```
-npm i --save @edx/eslint-config
+npx install-peerdeps --dev @edx/eslint-config
 ```
+
+This will install the package and all of its peer dependencies.
 
 Then, once it's installed, create an `.eslintrc.js` file in the top-level directory of your project with the following contents:
 
