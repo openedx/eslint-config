@@ -11,3 +11,7 @@ class MethodDoesNotUseThis {
     const bar = 'hah';
   }
 }
+
+// disable no-plusplus
+let i = 0;
+i++;
