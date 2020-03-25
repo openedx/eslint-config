@@ -32,7 +32,7 @@ module.exports = {
       labelComponents: [],
       labelAttributes: [],
       controlComponents: [],
-      assert: 'either',
+      assert: 'htmlFor',
       depth: 25
     }],
     'react/jsx-props-no-spreading': 'off',
