@@ -1,3 +1,4 @@
+import React from 'react'; // eslint-disable-line import/no-unresolved
 /* eslint-disable no-unused-vars */
 
 // Tests for custom rules in .eslintrc.js
@@ -9,6 +10,15 @@ const foo = bar => bar.id;
 class MethodDoesNotUseThis {
   foo() {
     const bar = 'hah';
+  }
+
+  render() {
+    return (
+      <>
+        <label htmlFor="the-input">The input</label>
+        <input id="the-input" type="text" value="hi" />
+      </>
+    );
   }
 }
 
