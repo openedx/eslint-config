@@ -11,6 +11,7 @@ module.exports = {
     // as peer dependencies.
     'airbnb',
   ],
+  plugins: ['simple-import-sort'],
   // If you add rule overrides here, add code to test.js that proves you formatted it right.
   rules: {
     'class-methods-use-this': 'off',
@@ -24,8 +25,8 @@ module.exports = {
         ignoreComments: false,
         ignoreRegExpLiterals: true,
         ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }
+        ignoreTemplateLiterals: true,
+      },
     ],
     'arrow-parens': 'off',
     'jsx-a11y/label-has-associated-control': ['error', {
@@ -33,12 +34,29 @@ module.exports = {
       labelAttributes: [],
       controlComponents: [],
       assert: 'htmlFor',
-      depth: 25
+      depth: 25,
     }],
+    'simple-import-sort/imports': [
+      'error', {
+        groups: [
+          // These packages provide polyfills so should always be first
+          ['core-js', 'regenerator-runtime'],
+          // React packages should come at the top
+          ['^react$', '^react-dom$', '^prop-types'],
+          // Non-react third-party packages come next
+          ['^@?\\w'],
+          // Packages from the @edx namespace come after that
+          ['^@edx?\\w'],
+          // Finally we have internal, relative imports
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$', '^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+        ],
+      },
+    ],
+    'simple-import-sort/exports': 'error',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/destructuring-assignment': 'off',
     'no-plusplus': 'off',
-    strict: 'off'
-  }
-}
+    strict: 'off',
+  },
+};
