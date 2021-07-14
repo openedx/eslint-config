@@ -24,8 +24,8 @@ module.exports = {
         ignoreComments: false,
         ignoreRegExpLiterals: true,
         ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }
+        ignoreTemplateLiterals: true,
+      },
     ],
     'arrow-parens': 'off',
     'jsx-a11y/label-has-associated-control': ['error', {
@@ -33,12 +33,12 @@ module.exports = {
       labelAttributes: [],
       controlComponents: [],
       assert: 'htmlFor',
-      depth: 25
+      depth: 25,
     }],
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/destructuring-assignment': 'off',
     'no-plusplus': 'off',
-    strict: 'off'
-  }
-}
+    strict: 'off',
+  },
+};
