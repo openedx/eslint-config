@@ -1,4 +1,3 @@
-import React from 'react'; // eslint-disable-line import/no-unresolved
 /* eslint-disable no-unused-vars */
 
 // Tests for custom rules in .eslintrc.js

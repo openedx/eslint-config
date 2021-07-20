@@ -36,6 +36,7 @@ module.exports = {
       depth: 25,
     }],
     'react/jsx-props-no-spreading': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/destructuring-assignment': 'off',
     'no-plusplus': 'off',
