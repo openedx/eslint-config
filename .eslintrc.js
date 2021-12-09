@@ -28,6 +28,12 @@ module.exports = {
       },
     ],
     'arrow-parens': 'off',
+    'function-paren-newline': ['error', 'consistent'],
+    'function-call-argument-newline': ['off', 'consistent'],
+    'react/function-component-definition': ['off', {
+      namedComponents: 'function-expression',
+      unnamedComponents: 'function-expression',
+    }],
     'jsx-a11y/label-has-associated-control': ['error', {
       labelComponents: [],
       labelAttributes: [],
@@ -39,7 +45,14 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/destructuring-assignment': 'off',
+    'react/no-unstable-nested-components': 'off',
+    'react/jsx-no-useless-fragment': 'off',
+    'react/no-unused-class-component-methods': 'off',
+    'react/jsx-no-constructed-context-values': 'off',
+    'react/no-invalid-html-attribute': 'off',
     'no-plusplus': 'off',
+    'no-promise-executor-return': 'off',
+    'prefer-regex-literals': 'off',
     strict: 'off',
   },
 };
