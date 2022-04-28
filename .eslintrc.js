@@ -10,6 +10,7 @@ module.exports = {
     // have those eslint-config plugins installed, though - it defines them
     // as peer dependencies.
     'airbnb',
+    'airbnb/hooks',
   ],
   // If you add rule overrides here, add code to test.js that proves you formatted it right.
   rules: {
