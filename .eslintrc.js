@@ -1,3 +1,21 @@
+const path = require('path');
+const fs = require('fs');
+
+/**
+ * TypeScript configuration for ESLint:
+ *
+ * Determine whether a `tsconfig.json` file exists in the root folder of the consuming
+ * project. If it exists, ensure ESLint is configured for TypeScript appropriately.
+ */
+const typeScriptParserOptions = {};
+const typeScriptExtensions = [];
+const tsConfigPath = path.resolve(process.cwd(), 'tsconfig.json');
+if (fs.existsSync(tsConfigPath)) {
+  typeScriptParserOptions.project = tsConfigPath;
+  typeScriptExtensions.push('airbnb-typescript');
+}
+/* End TypeScript configuration for ESLint */
+
 module.exports = {
   env: {
     es6: true,
@@ -11,7 +29,11 @@ module.exports = {
     // as peer dependencies.
     'airbnb',
     'airbnb/hooks',
+    ...typeScriptExtensions,
   ],
+  parserOptions: {
+    ...typeScriptParserOptions,
+  },
   // If you add rule overrides here, add code to test.js that proves you formatted it right.
   rules: {
     'class-methods-use-this': 'off',
