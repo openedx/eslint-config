@@ -24,3 +24,6 @@ class MethodDoesNotUseThis {
 // disable no-plusplus
 let i = 0;
 i++;
+
+// globalThis is allowed
+const value = globalThis.localStorage.getItem('foo');

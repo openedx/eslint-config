@@ -21,6 +21,7 @@ module.exports = {
     es6: true,
     browser: true,
     jest: true,
+    es2020: true,
   },
   extends: [
     // The airbnb config includes configuraton for import, react, and jsx-a11y.
