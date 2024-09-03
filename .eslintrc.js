@@ -65,5 +65,12 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'no-plusplus': 'off',
     strict: 'off',
+    // We don't require 'defaultProps' for function components (they're
+    // deprecated: https://github.com/facebook/react/pull/16210).
+    // It's better to use native JavaScript/TypeScript defaults and TS types.
+    'react/require-default-props': ['error', {
+      classes: 'defaultProps',
+      functions: 'ignore',
+    }],
   },
 };
