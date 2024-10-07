@@ -52,6 +52,12 @@ module.exports = {
       },
     ],
     'arrow-parens': 'off',
+    // Avoiding default exports is recommended (https://dev.to/phuocng/avoid-using-default-exports-a1c)
+    // but we had 'prefer-default-export' on for a long time so we can't turn on 'no-default-export' without causing
+    // a large refactor.
+    'import/prefer-default-export': 'off',
+    // There is no reason to disallow this syntax anymore; we don't use regenerator-runtime in new browsers
+    'no-restricted-syntax': 'off',
     'jsx-a11y/label-has-associated-control': ['error', {
       labelComponents: [],
       labelAttributes: [],
